@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Garbage Sorter</title>
+{% endblock %}
+
+{% block content1 %}
+<div class="container mt-5">
+    <div class="row justify-content-center p-2">
+        <div class="col-12 col-md-10 col-lg-7 card shadow p-3 m-2 rounded">
+            <form>
+                <div class="form-group">
+                    <div class="col-12">
+                        <label for="inputImage" class="mb-2"><strong>Ingrese la imagen a clasificar:</strong></label>
+                    </div>
+                    <div class="col-12">
+                        <input type="file" accept="image/png, image/jpeg" alt="imagen para clasificar" class="form-control-file mb-2" id="inputImage" hidden>
+                        <input type="button" class="btn btn-info" value="Elegir archivo" id="inputImageBtn"/>
+                    </div>
+                    <div class="col-12 container">
+                        <p id="image-name"></p>
+                        <img id="output" class="mb-2 img-output"/>
+                    </div>
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-info" value="Clasificar"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static  'js/action.js' %}"></script>
+{% endblock %}

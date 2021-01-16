@@ -1,0 +1,12 @@
+.img-output {
+    max-width: 100%;
+}
+
+.card {
+    background-color: rgba(233, 233, 233, 0.74);
+}
+
+#inputImage {
+    visibility: hidden;
+    display: none;
+}
