@@ -10,3 +10,8 @@
     visibility: hidden;
     display: none;
 }
+
+#inputIMG > p, #id_imagen, #cont-imagen-name {
+    visibility: hidden;
+    display: none;
+}
