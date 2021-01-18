@@ -14,7 +14,7 @@ SECRET_KEY = '-j#7)-m-qfl@)8bn#8s3qzpp2aii7q^e2s49pk8zufuoop^#4='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["garbagesortedia.azurewebsites.net"]
+ALLOWED_HOSTS = ["garbagesortedia.azurewebsites.net", "localhost"]
 
 
 # Application definition

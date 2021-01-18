@@ -4,3 +4,4 @@ Keras==2.4.3
 pandas==1.2.0
 sklearn
 matplotlib==3.3.3
+requests==2.25.1
