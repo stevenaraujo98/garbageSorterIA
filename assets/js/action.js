@@ -92,7 +92,7 @@ function getHTML(dat) {
     img.src = dat.img;
     div.appendChild(img);
     let p = document.createElement("p");
-    p.innerHTML = "Predicción: " + dat.accuracy + "%";
+    p.innerHTML = "Predicción: " + dat.accuracy + "%" + " (" + dat.model + ")";
     div.appendChild(p);
     imgs.appendChild(div);
 }

@@ -17,10 +17,10 @@ def submit_image(image_file):
             return res.json()["data"]["link"]
     return None
 
-def submit_results(clase, img, accuracy):
+def submit_results(clase, img, accuracy, model):
     url = "https://clasification-0871.restdb.io/rest/images"
 
-    payload = json.dumps( {"class": clase, "img": img, "accuracy": accuracy} )
+    payload = json.dumps( {"class": clase, "img": img, "accuracy": accuracy, "model": model} )
     headers = {
         'content-type': "application/json",
         'x-apikey': "6004c9251346a1524ff12b8a",

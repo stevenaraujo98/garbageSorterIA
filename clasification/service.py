@@ -3,7 +3,6 @@ from keras.layers import Dense, Conv2D, Flatten, MaxPooling2D, Dropout, Activati
 from keras import backend as K
 from keras import optimizers, regularizers, Model
 from keras.applications import densenet
-from keras import backend as K
 
 from keras.preprocessing.image import load_img, img_to_array
 from PIL import Image
@@ -18,11 +17,12 @@ class Densenet:
     batch_size = 32
     num_classes = 6 
     model = None
-    load_weights_file = './pesos/weights_save_densenet121_val_acc_86.022.h5'
+    #load_weights_file = 'weights_save_densenet121_val_acc_83.022.h5'
     imagen = None
     
-    def __init__(self):
+    def __init__(self, load_weights_file='weights_save_densenet121_val_acc_83.022.h5'):
         super().__init__()
+        self.load_weights_file = load_weights_file
 
         if K.image_data_format() == 'channels_first':
             input_shape = (3, self.img_width, self.img_height)
@@ -73,7 +73,7 @@ class Densenet:
         
     def load_weights(self):
         print("loading weights")
-        file_path = os.path.join(settings.BASE_DIR, 'clasification', 'pesos', 'weights_save_densenet121_val_acc_86.022.h5')
+        file_path = os.path.join(settings.BASE_DIR, 'clasification', 'pesos', self.load_weights_file)
         self.model.load_weights(file_path)
 
     def prediction(self):
